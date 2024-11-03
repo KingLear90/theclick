@@ -1,0 +1,34 @@
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(203, 18, 123);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: moves 4s linear infinite, spin 1s linear;
+}
+
+.circle.active {
+    display: none;
+}
+
+@keyframes moves {
+    0% {
+        transform: translateX(550px);
+    }
+    50%{
+        transform: translateY(120px);
+    }
+    100% {
+        transform: translateX(-90px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

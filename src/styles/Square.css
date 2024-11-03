@@ -1,0 +1,39 @@
+.square {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: move 3s linear infinite, spin 1s linear;
+}
+
+.square.active {
+    display: none;
+    animation: none;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(500px);
+    }
+    50%{
+        transform: translateY(300px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h2 {
+    display: flex;
+    margin-top: 2px;
+}
